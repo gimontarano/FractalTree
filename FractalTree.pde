@@ -1,6 +1,6 @@
 private double fractionLength = .8; 
 private int smallestBranch = 10; 
-private double branchAngle = -.3;  
+private double branchAngle = .35;  
 public void setup() 
 {   
 	size(640,480);    
@@ -12,26 +12,10 @@ public void draw()
 	stroke(255);   
 	line(320,480,320,380);   
 	drawBranches(320, 380, 100, 3*Math.PI/2);  //will add later 
+	
 } 
-public void mouseClicked()
-{
-	if(mouseX >= 320)
-	{
-		branchAngle += 0.1;
-	}
-	else if(mouseX < 320)
-	{
-		branchAngle -= 0.1;
-	}
-	if(mouseY >= 240)
-	{
-		//branchAngle += 0.1;
-	}
-	else if(mouseY < 240)
-	{
-		//branchAngle -= 0.1;
-	}
-}
+
+
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {   
 	double angle1 = angle + branchAngle;
